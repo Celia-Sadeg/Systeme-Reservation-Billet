@@ -1,0 +1,122 @@
+/* Importation d'une belle police */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Styles généraux */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #1a1a2e, #16213e);
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Barre de navigation */
+.navbar {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 15px 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.5);
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #00ffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #ff4500;
+}
+
+/* Conteneur principal */
+.container {
+    margin-top: 120px; /* Décalage pour éviter la navbar */
+    width: 80%;
+    max-width: 800px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.5);
+    text-align: center;
+}
+
+/* Titre principal */
+h1 {
+    font-size: 2.5rem;
+    color: #00ffff;
+    text-shadow: 0px 0px 10px #00ffff;
+}
+
+/* Boutons */
+.btn {
+    display: inline-block;
+    background: linear-gradient(to right, #00ffff, #007bff);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 10px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: linear-gradient(to right, #007bff, #00ffff);
+    box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.8);
+}
+/* Styles pour les cartes */
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 15px 0;
+    box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.5);
+    text-align: center;
+}
+
+/* Amélioration des boutons */
+.btn {
+    display: inline-block;
+    background: linear-gradient(to right, #00ffff, #007bff);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 10px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: linear-gradient(to right, #007bff, #00ffff);
+    box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.8);
+}

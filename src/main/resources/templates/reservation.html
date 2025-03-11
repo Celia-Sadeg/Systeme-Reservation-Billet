@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Réservation</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<nav class="navbar">
+    <ul>
+        <li><a href="/">🏠 Accueil</a></li>
+        <li><a href="/billets">📋 Billets</a></li>
+        <li><a href="/reservation">🛒 Réserver</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+    <h1>🛒 Réserver un Billet</h1>
+
+    <p th:if="${message}" th:text="${message}" class="message"></p>
+
+    <div class="card" th:each="billet : ${billets}">
+        <h2 th:text="${billet.type}"></h2>
+        <p>💰 Prix : <span th:text="${billet.prix} + '€'"></span></p>
+        <p>📅 Date : <span th:text="${billet.date}"></span></p>
+        <p>🎟️ Places Disponibles : <span th:text="${billet.quantiteDisponible}"></span></p>
+
+        <form action="/reserver" method="post">
+            <input type="hidden" name="type" th:value="${billet.type}">
+            <button class="btn" type="submit">🛒 Réserver</button>
+        </form>
+    </div>
+
+    <a href="/" class="btn">🏠 Retour</a>
+</div>
+</body>
+</html>

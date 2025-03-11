@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Billets Disponibles</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<!-- Barre de Navigation -->
+<nav class="navbar">
+    <ul>
+        <li><a href="/">🏠 Accueil</a></li>
+        <li><a href="/billets">📋 Billets</a></li>
+        <li><a href="/reservation">🛒 Réserver</a></li>
+    </ul>
+</nav>
+
+<!-- Contenu Principal -->
+<div class="container">
+    <h1>📋 Billets Disponibles</h1>
+
+    <div class="card" th:each="billet : ${billets}">
+        <h2 th:text="${billet.type}"></h2>
+        <p>💰 Prix : <span th:text="${billet.prix} + '€'"></span></p>
+        <p>📅 Date : <span th:text="${billet.date}"></span></p>
+        <p> Places Disponibles : <span th:text="${billet.quantiteDisponible}"></span></p>
+    </div>
+
+    <a href="/" class="btn">🏠 Retour</a>
+</div>
+</body>
+</html>
